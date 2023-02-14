@@ -1,0 +1,65 @@
+#screen {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 100%;
+  width: 100%;
+  aspect-ratio: 16/9;
+}
+#game {
+  grid-area: 1/1;
+  background-color: blue;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 10% / 10%;
+  grid-template-rows: 100%;
+}
+#game_background {
+  background-image: url(/photos/game_background.png);
+  background-size: cover;
+}
+#racket_container {
+  width: 13%;
+  position: absolute;
+  top: 18%;
+  left: 37%;
+}
+
+#racket_sprite {
+  width: 100%;
+  height: 100%;
+}
+
+#tennisball_container {
+  width: 11%;
+  position: absolute;
+  top: 72%;
+  left: 73%;
+}
+
+#tennisball_sprite {
+  width: 100%;
+  height: 100%;
+}
+
+#basketball_container {
+  width: 17%;
+  position: absolute;
+  top: 44%;
+  left: 48%;
+}
+
+#basketball_sprite {
+  width: 100%;
+  height: 100%;
+}
+
+#bomb_containe {
+  width: 17%;
+  position: absolute;
+  top: 44%;
+  left: 48%;
+}
+#bomb_sprite {
+  width: 100%;
+  height: 100%;
+}
