@@ -32,8 +32,8 @@
 #tennisball_container {
   width: 14%;
   position: absolute;
-  top: 72%;
-  left: 73%;
+  top: 45%;
+  left: 45%;
 }
 
 #tennisball_sprite {
@@ -42,9 +42,9 @@
 }
 
 #basketball_container {
-  width: 13%;
+  width: 10%;
   position: absolute;
-  top: 44%;
+  top: 35%;
   left: 48%;
 }
 
