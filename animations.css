@@ -1,0 +1,120 @@
+.racket_roll {
+  translate: -140%;
+  animation-name: roll5;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+@keyframes roll5 {
+  0% {
+    transform: translate(-350%, 100%);
+  }
+  100% {
+    transform: translate(650%, 100%) rotate(300deg);
+  }
+}
+.tennisball_roll {
+  translate: -140%;
+  animation-name: roll;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes roll {
+  0% {
+    transform: translate(-300%, 100%);
+  }
+  100% {
+    transform: translate(550%, 100%) rotate(120deg);
+  }
+}
+.basketball_roll {
+  translate: -200%;
+  animation-name: roll2;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes roll2 {
+  0% {
+    transform: translate(-600%, 100%);
+  }
+  100% {
+    transform: translate(750%, 100%) rotate(120deg);
+  }
+}
+.tennisball_2_roll {
+  translate: -140%;
+  animation-name: roll3;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes roll3 {
+  0% {
+    transform: translate(-300%, 100%);
+  }
+  100% {
+    transform: translate(650%, 100%) rotate(120deg);
+  }
+}
+.bomb_roll {
+  translate: -140%;
+  animation-name: roll4;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes roll4 {
+  0% {
+    transform: translate(-3000%, 100%);
+  }
+  100% {
+    transform: translate(6050%, 100%) rotate(120deg);
+  }
+}
+.basketball_2_roll {
+  translate: -200%;
+  animation-name: roll6;
+  animation-duration: 3s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: infinite;
+  animation-direction: alternate-reverse;
+}
+
+@keyframes roll6 {
+  0% {
+    transform: translate(-800%, 100%);
+  }
+  100% {
+    transform: translate(750%, 100%) rotate(120deg);
+  }
+}
+.zoom_out {
+  animation-name: zoom_out;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes zoom_out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+.paused {
+  animation-play-state: paused;
+}
