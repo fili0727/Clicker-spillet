@@ -59,25 +59,25 @@ body {
   width: 100%;
   height: 100%;
 }
-#basketball_container {
-  width: 10%;
+#football_container {
+  width: 14%;
   position: absolute;
   top: 30%;
   left: 48%;
 }
 
-#basketball_sprite {
+#football_sprite {
   width: 100%;
   height: 100%;
 }
-#basketball_2_container {
-  width: 10%;
+#football_2_container {
+  width: 14%;
   position: absolute;
   top: 5%;
   left: 48%;
 }
 
-#basketball_2_sprite {
+#football_2_sprite {
   width: 100%;
   height: 100%;
 }
@@ -91,87 +91,50 @@ body {
   width: 100%;
   height: 100%;
 }
-#heart_container {
+#heart1 {
   width: 5%;
   position: absolute;
   top: 1%;
   left: 75%;
 }
-#heart_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_lost_container {
+
+#heart2 {
   width: 5%;
   position: absolute;
   top: 1%;
-  left: 75%;
+  left: 81%;
 }
-#heart_lost_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_2_container {
+
+#heart3 {
   width: 5%;
   position: absolute;
   top: 1%;
-  left: 80%;
+  left: 87%;
 }
-#heart_2_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_lost_2_container {
+
+#heart4 {
   width: 5%;
   position: absolute;
   top: 1%;
-  left: 80%;
+  left: 93%;
 }
-#heart_lost_2_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_3_container {
+#tennisball_score {
   width: 5%;
   position: absolute;
-  top: 1%;
-  left: 85%;
+  top: 10%;
+  left: 7%;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: xx-large;
 }
-#heart_3_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_lost_3_container {
-  width: 5%;
+#tennisball_image {
+  width: 7%;
   position: absolute;
-  top: 1%;
-  left: 85%;
+  top: 8.2%;
+  left: 1%;
 }
-#heart_lost_3_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_4_container {
-  width: 5%;
-  position: absolute;
-  top: 1%;
-  left: 90%;
-}
-#heart_4_sprite {
-  width: 100%;
-  height: 100%;
-}
-#heart_lost_4_container {
-  width: 5%;
-  position: absolute;
-  top: 1%;
-  left: 90%;
-}
-#heart_lost_4_sprite {
-  width: 100%;
-  height: 100%;
-}
-#tennis_player_container {
+
+/* #tennis_player_container {
   width: 50%;
   position: absolute;
   top: 2%;
@@ -180,4 +143,4 @@ body {
 #tennis_player_sprite {
   width: 100%;
   height: 100%;
-}
+} */ ;

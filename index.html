@@ -16,71 +16,58 @@
           <div class="racket_roll" id="racket_container">
             <img id="racket_sprite" src="photos/racket.png" alt="racket" />
           </div>
-          <div id="tennisball_container" class="tennisball_roll">
+          <div id="tennisball_container">
             <img
               id="tennisball_sprite"
               src="photos/tennis_ball_2.png"
               alt="tennis ball"
             />
           </div>
-          <div id="tennisball_2_container" class="tennisball_2_roll">
+          <div id="tennisball_2_container">
             <img
               id="tennisball_2_sprite"
               src="photos/tennis_ball_2.png"
               alt="tennis ball"
             />
           </div>
-          <div id="basketball_container" class="basketball_roll">
+          <div id="football_container">
             <img
-              id="basketball_sprite"
-              src="photos/basket_ball.png"
-              alt="basket ball"
+              id="football_sprite"
+              src="photos/football.png"
+              alt="football"
             />
           </div>
-          <div id="basketball_2_container" class="basketball_2_roll">
+          <div id="football_2_container" class="football_2_roll">
             <img
-              id="basketball_2_sprite"
-              src="photos/basket_ball.png"
-              alt="basket ball"
+              id="football_2_sprite"
+              src="photos/football.png"
+              alt="football"
             />
           </div>
           <div id="bomb_container" class="bomb_roll">
             <img id="bomb_sprite" src="photos/bomb_2.png" alt="bomb" />
           </div>
-          <div id="tennis_player_container">
+          <!-- <div id="tennis_player_container">
             <img
               id="tennis_player_sprite"
               src="photos/tennis_player.png"
               alt="tenins player"
             />
-          </div>
+          </div> -->
         </div>
         <div id="game_ui">
-          <div id="score_board"></div>
+          <div id="score_board"> 
+            <span id="tennisball_score">0</span>
+            <img id="tennisball_image" src="photos/tennis_ball_2.png" alt="tennis ball">
+          </div>
+
           <img id="time_board" src="" />
-          <div id="heart_lost_container">
-            <img id="heart_lost_sprite" src="photos/heart_lost.png" />
-          </div>
-          <div id="heart_lost_2_container">
-            <img id="heart_lost_2_sprite" src="photos/heart_lost.png" />
-          </div>
-          <div id="heart_lost_3_container">
-            <img id="heart_lost_3_sprite" src="photos/heart_lost.png" />
-          </div>
-          <div id="heart_lost_4_container">
-            <img id="heart_lost_4_sprite" src="photos/heart_lost.png" />
-          </div>
-          <div id="heart_container">
-            <img id="heart_sprite" src="photos/heart.png" />
-          </div>
-          <div id="heart_2_container">
-            <img id="heart_2_sprite" src="photos/heart.png" />
-          </div>
-          <div id="heart_3_container">
-            <img id="heart_3_sprite" src="photos/heart.png" />
-          </div>
-          <div id="heart_4_container">
-            <img id="heart_4_sprite" src="photos/heart.png" alt="heart" />
+          <div>
+            <div id="life_board">
+              <img id="heart1" src="photos/heart.png" alt="heart" class="active_heart"/>
+              <img id="heart2" src="photos/heart.png" alt="heart" class="active_heart"/>
+              <img id="heart3" src="photos/heart.png" alt="heart" class="active_heart"/>
+              <img id="heart4" src="photos/heart.png" alt="heart" class="active_heart"/>
           </div>
         </div>
       </div>
@@ -88,5 +75,6 @@
       <div id="game_over"></div>
       <div id="level_complete"></div>
     </div>
+    <script src="app.js"></script>
   </body>
 </html>

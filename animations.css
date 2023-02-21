@@ -1,7 +1,7 @@
 .racket_roll {
   translate: -140%;
   animation-name: roll5;
-  animation-duration: 1.5s;
+  animation-duration: 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -17,7 +17,7 @@
 .tennisball_roll {
   translate: -140%;
   animation-name: roll;
-  animation-duration: 1.5s;
+  animation-duration: 3s;
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -31,10 +31,10 @@
     transform: translate(550%, 100%) rotate(120deg);
   }
 }
-.basketball_roll {
+.football_roll {
   translate: -200%;
   animation-name: roll2;
-  animation-duration: 1.5s;
+  animation-duration: 4s;
   animation-timing-function: ease-out;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -51,7 +51,7 @@
 .tennisball_2_roll {
   translate: -140%;
   animation-name: roll3;
-  animation-duration: 2s;
+  animation-duration: 4s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -66,9 +66,9 @@
   }
 }
 .bomb_roll {
-  translate: -140%;
+  translate: -100%;
   animation-name: roll4;
-  animation-duration: 8s;
+  animation-duration: 10s;
   animation-timing-function: linear;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -82,10 +82,10 @@
     transform: translate(6050%, 100%) rotate(120deg);
   }
 }
-.basketball_2_roll {
+.football_2_roll {
   translate: -200%;
   animation-name: roll6;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
@@ -115,6 +115,13 @@
     transform: scale(0);
   }
 }
+.broken_heart {
+  filter: grayscale(75%) blur(0.5px);
+}
+.active_heart {
+  filter: drop-shadow(0 0 2px rgb(0, 255, 119));
+}
+
 .paused {
   animation-play-state: paused;
 }
