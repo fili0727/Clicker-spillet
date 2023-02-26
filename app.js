@@ -1,6 +1,8 @@
 window.addEventListener("load", start);
 function start() {
   console.log("JavaScript kører!");
+  points = 0;
+  lives = 4;
 
   // Start animationer
   document
@@ -39,6 +41,9 @@ function clickTennisBall() {
     .querySelector("#tennisball_container")
     .addEventListener("animationend", TennisBallgone);
   increase();
+  if (points >= 10) {
+    level_complete();
+  }
 }
 function TennisBallgone() {
   // fjern event der bringer os herind
@@ -82,6 +87,9 @@ function clickTennisBall2() {
     .querySelector("#tennisball_2_container")
     .addEventListener("animationend", TennisBallgone2);
   increase();
+  if (points >= 10) {
+    level_complete();
+  }
 }
 function TennisBallgone2() {
   document
@@ -111,6 +119,9 @@ function clickFootball() {
     .querySelector("#football_container")
     .addEventListener("animationend", FootballGone);
   decrementedLives();
+  if (lives <= 0) {
+    gameover();
+  }
 }
 function FootballGone() {
   document
@@ -128,15 +139,13 @@ function FootballGone() {
     .addEventListener("click", clickFootball);
 }
 
-let tennisball_score = 0;
-let lives = 4;
 function displayScore() {
   console.log("display");
-  document.querySelector("#tennisball_score").textContent = tennisball_score;
+  document.querySelector("#tennisball_score").textContent = points;
 }
 function increase() {
   console.log("increase");
-  tennisball_score = tennisball_score + 1;
+  points = points + 1;
   displayScore();
 }
 
@@ -148,4 +157,11 @@ function decrementedLives() {
 function displayDecrementedLives() {
   document.querySelector("#heart" + lives).classList.remove("active_heart");
   document.querySelector("#heart" + lives).classList.add("broken_heart");
+}
+function gameover() {
+  document.querySelector("#game_over").classList.remove("hidden");
+}
+
+function level_complete() {
+  document.querySelector("#level_complete").classList.remove("hidden");
 }
