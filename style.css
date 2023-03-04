@@ -11,13 +11,17 @@ body {
   background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
   color: #ffffff;
 }
+
+#start,
 #level_complete {
   grid-area: 1 /1;
   z-index: 999;
   display: grid;
   justify-content: center;
   align-content: center;
-  background-image: linear-gradient(150deg, #20c903 0%, #09793b 100%);
+  font-size: larger;
+  text-align: center;
+  background-image: linear-gradient(150deg, #bdd56c 0%, #bfdf68 100%);
   color: #ffffff;
 }
 #screen {
@@ -49,7 +53,6 @@ body {
 #racket_container {
   width: 13%;
   position: absolute;
-  top: 25%;
   left: 37%;
 }
 
@@ -61,7 +64,6 @@ body {
 #tennisball_container {
   width: 14%;
   position: absolute;
-  top: 0;
   left: 45%;
 }
 #tennisball_sprite {
@@ -71,7 +73,7 @@ body {
 #tennisball_2_container {
   width: 14%;
   position: absolute;
-  top: 20%;
+
   left: 45%;
 }
 #tennisball_2_sprite {
@@ -81,7 +83,7 @@ body {
 #football_container {
   width: 14%;
   position: absolute;
-  top: 30%;
+
   left: 48%;
 }
 
@@ -92,7 +94,7 @@ body {
 #football_2_container {
   width: 14%;
   position: absolute;
-  top: 5%;
+
   left: 48%;
 }
 
@@ -103,7 +105,6 @@ body {
 #bomb_container {
   width: 10%;
   position: absolute;
-  top: 0;
   left: 12%;
 }
 #bomb_sprite {
@@ -140,7 +141,7 @@ body {
 #tennisball_score {
   width: 5%;
   position: absolute;
-  top: 10%;
+  top: 2%;
   left: 7%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
@@ -149,22 +150,45 @@ body {
 #tennisball_image {
   width: 7%;
   position: absolute;
-  top: 8.2%;
+  top: 1%;
   left: 1%;
 }
 
 .hidden,
 #game_over.hidden,
-#level_complete.hidden {
+#level_complete.hidden,
+#start.hidden {
   display: none;
 }
-/* #tennis_player_container {
-  width: 50%;
+#time_container {
+  z-index: 100;
   position: absolute;
+  width: 38%;
+  height: 8%;
   top: 2%;
-  left: 50%;
+  left: 35%;
 }
-#tennis_player_sprite {
+#time_sprite {
+  z-index: 100;
+  position: absolute;
   width: 100%;
   height: 100%;
-} */
+  transform-origin: center;
+}
+
+* {
+  user-select: none;
+}
+img {
+  -webkit-user-drag: none;
+}
+button {
+  padding: 5px 30px;
+  font-size: 2em;
+  margin: auto;
+  background-color: #67dc71;
+  color: #f2ffbf;
+  border: 10px solid #65d66e;
+  cursor: pointer;
+  border-radius: 10px;
+}

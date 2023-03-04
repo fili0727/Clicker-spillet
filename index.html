@@ -13,9 +13,6 @@
       <div id="game">
         <div id="game_background"></div>
         <div id="game_elements">
-          <!-- <div class="racket_roll" id="racket_container">
-            <img id="racket_sprite" src="photos/racket.png" alt="racket" />
-          </div> -->
           <div id="tennisball_container">
             <img
               id="tennisball_sprite"
@@ -37,7 +34,7 @@
               alt="football"
             />
           </div>
-          <div id="football_2_container" class="football_2_roll">
+          <div id="football_2_container">
             <img
               id="football_2_sprite"
               src="photos/football.png"
@@ -47,22 +44,14 @@
           <div id="bomb_container" class="bomb_roll">
             <img id="bomb_sprite" src="photos/bomb_2.png" alt="bomb" />
           </div>
-          <!-- <div id="tennis_player_container">
-            <img
-              id="tennis_player_sprite"
-              src="photos/tennis_player.png"
-              alt="tenins player"
-            />
-          </div> -->
         </div>
         <div id="game_ui">
           <div id="score_board"> 
             <span id="tennisball_score">0</span>
             <img id="tennisball_image" src="photos/tennis_ball_2.png" alt="tennis ball">
+          <div id="time_container">
+          <img id="time_sprite" class="" src="photos/timer.png" alt="Timer">
           </div>
-
-          <img id="time_board" src="" />
-          <div>
             <div id="life_board">
               <img id="heart1" src="photos/heart.png" alt="heart" class="active_heart"/>
               <img id="heart2" src="photos/heart.png" alt="heart" class="active_heart"/>
@@ -71,14 +60,20 @@
           </div>
         </div>
       </div>
-      <div id="start" class="hidden"></div>
+    </div>
+      <div id="start">
+        <h2>Tennis Clicker🎾</h2>
+        <p>Du skal nå at klikke på 10 tennisbolde inden tiden løber ud!<br> Men pas på du ikke klikker på fodboldene, så mister du nemlig liv!😵 <br> Og hvis du mister alle 4 er det game over!</p>
+        <button id="btn_start" class="pulse">Start spil!</button>
+      </div>
       <div id="game_over" class="hidden">
-        <h1>Game over bitch</h1>
+        <h1>Du tabte!😖😵</h1>
+        <button id="btn_restart" class="pulse">Genstart spillet</button>
       </div>
       <div id="level_complete" class="hidden">
-        <h1>Level complete slay</h1>
+        <h1>Level complete🎾🎉</h1>
+        <button id="btn_go_to_start" class="pulse">Tilbage til start!</button>
       </div>
-    </div>
     <script src="app.js"></script>
   </body>
 </html>

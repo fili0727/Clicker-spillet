@@ -1,104 +1,20 @@
-.racket_roll {
-  translate: -140%;
-  animation-name: roll5;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-@keyframes roll5 {
-  0% {
-    transform: translate(-350%, 100%);
-  }
-  100% {
-    transform: translate(650%, 100%) rotate(300deg);
-  }
-}
-.tennisball_roll {
-  translate: -140%;
+.roll {
   animation-name: roll;
   animation-duration: 3s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
   animation-direction: alternate-reverse;
 }
 
 @keyframes roll {
   0% {
-    transform: translate(-300%, 100%);
+    transform: translate(-450%, 100%);
   }
   100% {
-    transform: translate(550%, 100%) rotate(120deg);
+    transform: translate(400%, 100%) rotate(120deg);
   }
-}
-.football_roll {
-  translate: -200%;
-  animation-name: roll2;
-  animation-duration: 4s;
-  animation-timing-function: ease-out;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
 }
 
-@keyframes roll2 {
-  0% {
-    transform: translate(-600%, 100%);
-  }
-  100% {
-    transform: translate(750%, 100%) rotate(120deg);
-  }
-}
-.tennisball_2_roll {
-  translate: -140%;
-  animation-name: roll3;
-  animation-duration: 4s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-@keyframes roll3 {
-  0% {
-    transform: translate(-300%, 100%);
-  }
-  100% {
-    transform: translate(650%, 100%) rotate(120deg);
-  }
-}
-.bomb_roll {
-  translate: -100%;
-  animation-name: roll4;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-@keyframes roll4 {
-  0% {
-    transform: translate(-3000%, 100%);
-  }
-  100% {
-    transform: translate(6050%, 100%) rotate(120deg);
-  }
-}
-.football_2_roll {
-  translate: -200%;
-  animation-name: roll6;
-  animation-duration: 4s;
-  animation-timing-function: ease-in;
-  animation-iteration-count: infinite;
-  animation-direction: alternate-reverse;
-}
-
-@keyframes roll6 {
-  0% {
-    transform: translate(-800%, 100%);
-  }
-  100% {
-    transform: translate(750%, 100%) rotate(120deg);
-  }
-}
 .zoom_out {
   animation-name: zoom_out;
   animation-duration: 1s;
@@ -122,6 +38,65 @@
   filter: drop-shadow(0 0 2px rgb(0, 255, 119));
 }
 
+.position1 {
+  top: -10%;
+}
+.position2 {
+  top: 0%;
+}
+.position3 {
+  top: 35%;
+}
+.position4 {
+  top: 20%;
+}
+.position5 {
+  top: 5%;
+}
+
+.speed1 {
+  animation-duration: 4s;
+}
+
+.speed2 {
+  animation-duration: 3.5s;
+}
+
+.speed3 {
+  animation-duration: 3.2s;
+}
+.pulse {
+  animation-name: pulse;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-direction: alternate;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+.shrink {
+  animation-name: shrink;
+  animation-duration: 10s;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+}
+
+@keyframes shrink {
+  0% {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(100% 0, 100% 0, 100% 100%, 100% 100%);
+  }
+}
 .paused {
   animation-play-state: paused;
 }
