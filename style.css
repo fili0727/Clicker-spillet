@@ -132,11 +132,11 @@ body {
 #tennisball_score {
   width: 5%;
   position: absolute;
-  top: 2%;
+  top: 3.3%;
   left: 7%;
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
-  font-size: xx-large;
+  font-size: 3.4vw;
 }
 #tennisball_image {
   width: 7%;
