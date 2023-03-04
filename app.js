@@ -45,6 +45,7 @@ function startTimer() {
     .addEventListener("animationend", timeIsUp);
 }
 function resetLives() {
+  console.log("resetLives");
   document.querySelector("#heart1").classList.remove("broken_heart");
   document.querySelector("#heart2").classList.remove("broken_heart");
   document.querySelector("#heart3").classList.remove("broken_heart");
@@ -223,6 +224,8 @@ function displayDecrementedLives() {
 function gameover() {
   document.querySelector("#game_over").classList.remove("hidden");
   document.querySelector("#sound_gameover").play();
+  if (lives <= 0) {
+  }
   stopGame();
 }
 
