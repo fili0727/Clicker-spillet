@@ -18,6 +18,11 @@ function startGame() {
   resetLives();
   resetPoints();
   showGameScreen();
+
+  //Start musik
+  document.querySelector("#sound_game").play();
+  document.querySelector("#sound_game").volume = 0.5;
+  document.querySelector("#sound_game").currentTime = 0;
   //Skjul startskærm
   document.querySelector("#start").classList.add("hidden");
   // Start tid
@@ -29,7 +34,10 @@ function startGame() {
   registrerClick();
   animationRepeat();
 }
+
 function startTimer() {
+  document.querySelector("#time_sprite").classList.remove("shrink");
+  document.querySelector("#time_sprite").offsetWidth;
   document.querySelector("#time_sprite").classList.add("shrink");
 
   document
@@ -67,6 +75,9 @@ function registrerClick() {
     .querySelector("#tennisball_2_container")
     .addEventListener("click", clickTennisBall);
   document
+    .querySelector("#tennisball_3_container")
+    .addEventListener("click", clickTennisBall);
+  document
     .querySelector("#football_container")
     .addEventListener("click", clickFootball);
   document
@@ -78,12 +89,14 @@ function startPositioner() {
   document.querySelector("#tennisball_2_container").classList.add("position2");
   document.querySelector("#football_container").classList.add("position3");
   document.querySelector("#football_2_container").classList.add("position4");
+  document.querySelector("#tennisball_3_container").classList.add("position5");
 }
 function startAnimation() {
   document.querySelector("#tennisball_container").classList.add("roll");
   document.querySelector("#tennisball_2_container").classList.add("roll");
   document.querySelector("#football_container").classList.add("roll");
   document.querySelector("#football_2_container").classList.add("roll");
+  document.querySelector("#tennisball_3_container").classList.add("roll");
 }
 function clickTennisBall() {
   console.log("Click Tennis Ball");
@@ -99,6 +112,8 @@ function clickTennisBall() {
 
   // når forsvind-animation er færdig: coinGone
   tennisball.addEventListener("animationend", TennisBallgone);
+  document.querySelector("#sound_tennisball").play();
+  document.querySelector("#sound_tennisball").currentTime = 0;
   increase();
   if (points >= 10) {
     level_complete();
@@ -124,12 +139,15 @@ function TennisBallgone() {
   tennisball.addEventListener("click", clickTennisBall);
 }
 function animationRepeat() {
-  console.log("hej");
+  console.log("Repeat");
   document
     .querySelector("#tennisball_container")
     .addEventListener("animationend", ballRestart);
   document
     .querySelector("#tennisball_2_container")
+    .addEventListener("animationend", ballRestart);
+  document
+    .querySelector("#tennisball_3_container")
     .addEventListener("animationend", ballRestart);
   document
     .querySelector("#football_container")
@@ -148,9 +166,10 @@ function ballRestart() {
     "position2",
     "position3",
     "position4",
-    "position5"
+    "position5",
+    "position6"
   );
-  let pos = Math.floor(Math.random() * 5) + 1;
+  let pos = Math.floor(Math.random() * 6) + 1;
   ball.classList.add("position" + pos);
   ball.classList.remove("speed1", "speed2", "speed3", "speed4");
   let speed = Math.floor(Math.random() * 4) + 1;
@@ -164,6 +183,8 @@ function clickFootball() {
   football.classList.add("paused");
   football.querySelector("img").classList.add("zoom_out");
   football.addEventListener("animationend", FootballGone);
+  document.querySelector("#sound_football").play();
+  document.querySelector("#sound_football").currentTime = 0;
   decrementedLives();
   if (lives <= 0) {
     gameover();
@@ -201,11 +222,13 @@ function displayDecrementedLives() {
 }
 function gameover() {
   document.querySelector("#game_over").classList.remove("hidden");
+  document.querySelector("#sound_gameover").play();
   stopGame();
 }
 
 function level_complete() {
   document.querySelector("#level_complete").classList.remove("hidden");
+  document.querySelector("#sound_win").play();
   stopGame();
 }
 function showStartScreen() {
@@ -227,6 +250,7 @@ function stopGame() {
   //Stop Animation
   document.querySelector("#tennisball_container").classList.remove("roll");
   document.querySelector("#tennisball_2_container").classList.remove("roll");
+  document.querySelector("#tennisball_3_container").classList.remove("roll");
   document.querySelector("#football_container").classList.remove("roll");
   document.querySelector("#football_2_container").classList.remove("roll");
   //Fjern click
@@ -237,9 +261,13 @@ function stopGame() {
     .querySelector("#tennisball_2_container")
     .removeEventListener("click", clickTennisBall);
   document
+    .querySelector("#tennisball_3_container")
+    .removeEventListener("click", clickTennisBall);
+  document
     .querySelector("#football_container")
     .removeEventListener("click", clickFootball);
   document
     .querySelector("#football_2_container")
     .removeEventListener("click", clickFootball);
+  document.querySelector("#sound_game").pause();
 }

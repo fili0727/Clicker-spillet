@@ -17,15 +17,18 @@
             <img
               id="tennisball_sprite"
               src="photos/tennis_ball_2.png"
-              alt="tennis ball"
+              alt="tennisball"
             />
           </div>
           <div id="tennisball_2_container">
             <img
               id="tennisball_2_sprite"
               src="photos/tennis_ball_2.png"
-              alt="tennis ball"
+              alt="tennisball"
             />
+          </div>
+          <div id="tennisball_3_container">
+            <img id="tennisball_3_sprite" src="photos/tennis_ball_2.png" alt="tennisball">
           </div>
           <div id="football_container">
             <img
@@ -40,9 +43,6 @@
               src="photos/football.png"
               alt="football"
             />
-          </div>
-          <div id="bomb_container" class="bomb_roll">
-            <img id="bomb_sprite" src="photos/bomb_2.png" alt="bomb" />
           </div>
         </div>
         <div id="game_ui">
@@ -74,6 +74,12 @@
         <h1>Level complete🎾🎉</h1>
         <button id="btn_go_to_start" class="pulse">Tilbage til start!</button>
       </div>
-    <script src="app.js"></script>
+
+    <audio id="sound_gameover" src="sounds/gameOver.mp3"></audio>
+    <audio id="sound_win" src="sounds/tada.mp3"></audio>
+    <audio id="sound_tennisball" src="sounds/tennisball.mp3"></audio>
+    <audio id="sound_game" src="sounds/game.mp3"></audio>
+    <audio id="sound_football" src="sounds/football.mp3"></audio>
+  <script src="app.js"></script>
   </body>
 </html>

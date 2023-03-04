@@ -8,8 +8,9 @@ body {
   display: grid;
   justify-content: center;
   align-content: center;
-  background-image: linear-gradient(150deg, #c90303 0%, #790909 100%);
+  background-image: linear-gradient(150deg, #a7c247 0%, #b5601a 100%);
   color: #ffffff;
+  text-align: center;
 }
 
 #start,
@@ -21,7 +22,7 @@ body {
   align-content: center;
   font-size: larger;
   text-align: center;
-  background-image: linear-gradient(150deg, #bdd56c 0%, #bfdf68 100%);
+  background-image: linear-gradient(150deg, #c2d388 0%, #addd29 100%);
   color: #ffffff;
 }
 #screen {
@@ -50,17 +51,6 @@ body {
   overflow: hidden;
 }
 
-#racket_container {
-  width: 13%;
-  position: absolute;
-  left: 37%;
-}
-
-#racket_sprite {
-  width: 100%;
-  height: 100%;
-}
-
 #tennisball_container {
   width: 14%;
   position: absolute;
@@ -77,6 +67,15 @@ body {
   left: 45%;
 }
 #tennisball_2_sprite {
+  width: 100%;
+  height: 100%;
+}
+#tennisball_3_container {
+  width: 14%;
+  position: absolute;
+  left: 45%;
+}
+#tennisball_3_sprite {
   width: 100%;
   height: 100%;
 }
@@ -102,15 +101,7 @@ body {
   width: 100%;
   height: 100%;
 }
-#bomb_container {
-  width: 10%;
-  position: absolute;
-  left: 12%;
-}
-#bomb_sprite {
-  width: 100%;
-  height: 100%;
-}
+
 #heart1 {
   width: 5%;
   position: absolute;

@@ -31,6 +31,7 @@
     transform: scale(0);
   }
 }
+
 .broken_heart {
   filter: grayscale(75%) blur(0.5px);
 }
@@ -53,6 +54,9 @@
 .position5 {
   top: 5%;
 }
+.position6 {
+  top: 10%;
+}
 
 .speed1 {
   animation-duration: 4s;
@@ -64,6 +68,9 @@
 
 .speed3 {
   animation-duration: 3.2s;
+}
+.speed4 {
+  animation-duration: 2.9s;
 }
 .pulse {
   animation-name: pulse;
