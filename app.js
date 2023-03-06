@@ -1,6 +1,7 @@
 "use strict";
 let points;
 let lives;
+let isGameRunning = false;
 
 window.addEventListener("load", ready);
 
@@ -13,8 +14,7 @@ function ready() {
   document.querySelector("#btn_restart").addEventListener("click", startGame);
 }
 function startGame() {
-  points = 0;
-  lives = 4;
+  isGameRunning = true;
   resetLives();
   resetPoints();
   showGameScreen();
@@ -46,6 +46,7 @@ function startTimer() {
 }
 function resetLives() {
   console.log("resetLives");
+  lives = 4;
   document.querySelector("#heart1").classList.remove("broken_heart");
   document.querySelector("#heart2").classList.remove("broken_heart");
   document.querySelector("#heart3").classList.remove("broken_heart");
@@ -124,19 +125,11 @@ function TennisBallgone() {
   // fjern event der bringer os herind
   let tennisball = this;
   tennisball.removeEventListener("animationend", TennisBallgone);
-
   // fjern forsvind-animation
   tennisball.querySelector("img").classList.remove("zoom_out");
-
   // fjern pause
   tennisball.classList.remove("paused");
-
-  // genstart falling animation
-  tennisball.classList.remove("roll");
-  tennisball.offsetWidth;
-  tennisball.classList.add("roll");
-
-  // gør det muligt at klikke på coin igen
+  // gør det muligt at klikke på tennisbolden igen
   tennisball.addEventListener("click", clickTennisBall);
 }
 function animationRepeat() {
@@ -196,18 +189,15 @@ function FootballGone() {
   football.removeEventListener("animationend", FootballGone);
   football.querySelector("img").classList.remove("zoom_out");
   football.classList.remove("paused");
-  football.classList.remove("football_roll");
-  football.offsetWidth;
-  football.classList.add("football_roll");
   football.addEventListener("click", clickFootball);
 }
 
 function displayScore() {
-  console.log("display");
+  console.log("display score");
   document.querySelector("#tennisball_score").textContent = points;
 }
 function increase() {
-  console.log("increase");
+  console.log("increase points");
   points = points + 1;
   displayScore();
 }
@@ -241,15 +231,18 @@ function showStartScreen() {
 }
 function timeIsUp() {
   console.log("Tiden er gået!");
-
-  if (points >= 10) {
-    levelComplete();
-  } else {
-    gameover();
+  if (isGameRunning) {
+    if (points >= 10) {
+      level_complete();
+    } else {
+      gameover();
+    }
   }
 }
 
 function stopGame() {
+  console.log("stop game");
+  isGameRunning = false;
   //Stop Animation
   document.querySelector("#tennisball_container").classList.remove("roll");
   document.querySelector("#tennisball_2_container").classList.remove("roll");
@@ -272,5 +265,6 @@ function stopGame() {
   document
     .querySelector("#football_2_container")
     .removeEventListener("click", clickFootball);
+  //Stop baggrundsmusik
   document.querySelector("#sound_game").pause();
 }
