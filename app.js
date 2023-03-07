@@ -72,19 +72,19 @@ function showGameScreen() {
 function registrerClick() {
   document
     .querySelector("#tennisball_container")
-    .addEventListener("click", clickTennisBall);
+    .addEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#tennisball_2_container")
-    .addEventListener("click", clickTennisBall);
+    .addEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#tennisball_3_container")
-    .addEventListener("click", clickTennisBall);
+    .addEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#football_container")
-    .addEventListener("click", clickFootball);
+    .addEventListener("mousedown", clickFootball);
   document
     .querySelector("#football_2_container")
-    .addEventListener("click", clickFootball);
+    .addEventListener("mousedown", clickFootball);
 }
 function startPositioner() {
   document.querySelector("#tennisball_container").classList.add("position1");
@@ -104,7 +104,7 @@ function clickTennisBall() {
   console.log("Click Tennis Ball");
   // Forhindr gentagne clicks
   let tennisball = this;
-  tennisball.removeEventListener("click", clickTennisBall);
+  tennisball.removeEventListener("mousedown", clickTennisBall);
 
   // Stop tennisball container
   tennisball.classList.add("paused");
@@ -117,7 +117,7 @@ function clickTennisBall() {
   document.querySelector("#sound_tennisball").play();
   document.querySelector("#sound_tennisball").currentTime = 0;
   increase();
-  if (points >= 10) {
+  if (points >= 12) {
     level_complete();
   }
 }
@@ -130,7 +130,7 @@ function TennisBallgone() {
   // fjern pause
   tennisball.classList.remove("paused");
   // gør det muligt at klikke på tennisbolden igen
-  tennisball.addEventListener("click", clickTennisBall);
+  tennisball.addEventListener("mousedown", clickTennisBall);
 }
 function animationRepeat() {
   console.log("Repeat");
@@ -173,7 +173,7 @@ function ballRestart() {
 function clickFootball() {
   console.log("Click Football");
   let football = this;
-  football.removeEventListener("click", clickFootball);
+  football.removeEventListener("mousedown", clickFootball);
   football.classList.add("paused");
   football.querySelector("img").classList.add("zoom_out");
   football.addEventListener("animationend", FootballGone);
@@ -189,7 +189,7 @@ function FootballGone() {
   football.removeEventListener("animationend", FootballGone);
   football.querySelector("img").classList.remove("zoom_out");
   football.classList.remove("paused");
-  football.addEventListener("click", clickFootball);
+  football.addEventListener("mousedown", clickFootball);
 }
 
 function displayScore() {
@@ -232,7 +232,7 @@ function showStartScreen() {
 function timeIsUp() {
   console.log("Tiden er gået!");
   if (isGameRunning) {
-    if (points >= 10) {
+    if (points >= 12) {
       level_complete();
     } else {
       gameover();
@@ -252,19 +252,19 @@ function stopGame() {
   //Fjern click
   document
     .querySelector("#tennisball_container")
-    .removeEventListener("click", clickTennisBall);
+    .removeEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#tennisball_2_container")
-    .removeEventListener("click", clickTennisBall);
+    .removeEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#tennisball_3_container")
-    .removeEventListener("click", clickTennisBall);
+    .removeEventListener("mousedown", clickTennisBall);
   document
     .querySelector("#football_container")
-    .removeEventListener("click", clickFootball);
+    .removeEventListener("mousedown", clickFootball);
   document
     .querySelector("#football_2_container")
-    .removeEventListener("click", clickFootball);
+    .removeEventListener("mousedown", clickFootball);
   //Stop baggrundsmusik
   document.querySelector("#sound_game").pause();
 }
