@@ -109,10 +109,10 @@ function clickTennisBall() {
   // Stop tennisball container
   tennisball.classList.add("paused");
 
-  // sæt forsvind-animation på coin
+  // sæt forsvind-animation på tennisball
   tennisball.querySelector("img").classList.add("zoom_out");
 
-  // når forsvind-animation er færdig: coinGone
+  // når forsvind-animation er færdig: TennisBallgone
   tennisball.addEventListener("animationend", TennisBallgone);
   document.querySelector("#sound_tennisball").play();
   document.querySelector("#sound_tennisball").currentTime = 0;
